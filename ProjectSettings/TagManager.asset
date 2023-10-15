@@ -7,6 +7,9 @@ TagManager:
   - Button
   - Teleport
   - Climbable
+  - leftHand
+  - rightHand
+  - blowtorch
   layers:
   - Default
   - TransparentFX
