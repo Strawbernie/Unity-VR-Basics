@@ -1502,6 +1502,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2211243369130305, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458455987147310421, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 531376398428565175, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 874718831114310720, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060608866940995710, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159224892762228609, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307048114717635022, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4377414555395714346, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
       propertyPath: m_Name
       value: Ladder
@@ -1556,6 +1584,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4377414555395714347, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125856410922115984, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761501312052140718, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052282906807323033, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7670070814295496815, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768379253584393195, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822066871267305345, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8248743371041620182, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9166705365556389255, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_ThrowOnDetach
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
