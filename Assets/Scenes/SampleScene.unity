@@ -1453,7 +1453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 792f3218c9e10e4448507027e21ef18b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7
+      value: 3.026
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 792f3218c9e10e4448507027e21ef18b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3606,7 +3606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 792f3218c9e10e4448507027e21ef18b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7
+      value: 3.026
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 792f3218c9e10e4448507027e21ef18b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5750,6 +5750,75 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1641102600}
   m_SourcePrefab: {fileID: 100100000, guid: 06c5a3f1033d948439f25730fa9cb476, type: 3}
+--- !u!1001 &1122198691
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.27
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      propertyPath: m_Name
+      value: oxygenmachine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
 --- !u!1001 &1130038578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9816,5 +9885,6 @@ SceneRoots:
   - {fileID: 1534459326}
   - {fileID: 419346575}
   - {fileID: 944755583}
+  - {fileID: 1122198691}
   - {fileID: 265753704}
   - {fileID: 599146460}
