@@ -16,6 +16,7 @@ public class Blowtorch : MonoBehaviour
     private bool holdingRight;
     private bool holdingLeft;
     public GameObject PS;
+    public InputData inputData;
     private void Start()
     {
         RightController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
@@ -49,14 +50,18 @@ public class Blowtorch : MonoBehaviour
     }
     private void CheckControllerInput(InputDevice controller)
     {
-        if (holdingRight|holdingLeft )
+        if (inputData._rightController.TryGetFeatureValue(CommonUsages.triggerButton, out bool Button)|(inputData._leftController.TryGetFeatureValue(CommonUsages.triggerButton, out bool LeftButton)))
         {
-            PS.SetActive(true);
-            //Debug.Log("Works");
+            if (holdingRight && Button|(holdingLeft && LeftButton))
+            {
+                PS.SetActive(true);
+                //Debug.Log("Works");
+            }
+            else
+            {
+                PS.SetActive(false);
+            }
         }
-        else
-        {
-            PS.SetActive(false);
-        }
+       
     }
     }
