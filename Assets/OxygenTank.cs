@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class OxygenTank : MonoBehaviour
 {
-    float OxygenLeft = 100.0f;
+    public float OxygenLeft = 100.0f;
     float OxygenDecrease = 0.1f;
     public Transform OxygenMeter;
-    private void OnTriggerStay(Collider other)
+    public bool isEmpty;
+    public void DepleteOxygen()
     {
-        if (other.transform.tag == "OxygenInteractor" && OxygenLeft > 0.0f)
+        if (OxygenLeft > 0.0f)
         {
             OxygenLeft = OxygenLeft - OxygenDecrease * Time.deltaTime;
             Debug.Log("Oxygen Left:" + OxygenLeft);

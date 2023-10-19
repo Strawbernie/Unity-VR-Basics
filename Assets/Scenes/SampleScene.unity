@@ -1990,6 +1990,7 @@ GameObject:
   - component: {fileID: 455210379}
   - component: {fileID: 455210378}
   - component: {fileID: 455210377}
+  - component: {fileID: 455210381}
   m_Layer: 0
   m_Name: Socket Interactor
   m_TagString: OxygenInteractor
@@ -2143,6 +2144,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455210375}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &455210381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455210375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3c023b6e7ee5c408eec449475e6124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasOxygen: 0
+  oxygenManager: {fileID: 1233901237}
 --- !u!1001 &459358750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3870,6 +3885,7 @@ GameObject:
   - component: {fileID: 650921425}
   - component: {fileID: 650921424}
   - component: {fileID: 650921423}
+  - component: {fileID: 650921427}
   m_Layer: 0
   m_Name: Socket Interactor
   m_TagString: OxygenInteractor
@@ -4023,6 +4039,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650921421}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &650921427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650921421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3c023b6e7ee5c408eec449475e6124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasOxygen: 0
+  oxygenManager: {fileID: 1233901237}
 --- !u!1 &673565195
 GameObject:
   m_ObjectHideFlags: 0
@@ -6162,6 +6192,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1233901236}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1233901237}
   m_SourcePrefab: {fileID: 100100000, guid: 434974c4195feed4c8353e5281c9a1a7, type: 3}
 --- !u!1001 &1130038578
 PrefabInstance:
@@ -6381,6 +6414,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.925295, y: 2.8172228, z: 1.4613309}
   m_Center: {x: -4.101106, y: 1.5084454, z: -0.7943038}
+--- !u!114 &1233901237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233901234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 927bad691f85a3246bd28a181e8f13a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OxygenTank1: {fileID: 1598294647}
+  OxygenTank2: {fileID: 455210381}
+  OxygenTank3: {fileID: 650921427}
 --- !u!65 &1255153118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7138,6 +7186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: oxygentank (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4232570290151612524, guid: 985d94fad3a5c104abb840c32127b4ad, type: 3}
+      propertyPath: m_TagString
+      value: OxygenTank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7759,6 +7811,7 @@ GameObject:
   - component: {fileID: 1598294645}
   - component: {fileID: 1598294644}
   - component: {fileID: 1598294643}
+  - component: {fileID: 1598294647}
   m_Layer: 0
   m_Name: Socket Interactor
   m_TagString: OxygenInteractor
@@ -7912,6 +7965,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598294641}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1598294647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598294641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3c023b6e7ee5c408eec449475e6124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasOxygen: 0
+  oxygenManager: {fileID: 1233901237}
 --- !u!65 &1605259101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8920,6 +8987,10 @@ PrefabInstance:
     - target: {fileID: 4232570290151612524, guid: 985d94fad3a5c104abb840c32127b4ad, type: 3}
       propertyPath: m_Name
       value: oxygentank (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232570290151612524, guid: 985d94fad3a5c104abb840c32127b4ad, type: 3}
+      propertyPath: m_TagString
+      value: OxygenTank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10431,6 +10502,10 @@ PrefabInstance:
     - target: {fileID: 4232570290151612524, guid: 985d94fad3a5c104abb840c32127b4ad, type: 3}
       propertyPath: m_Name
       value: oxygentank
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232570290151612524, guid: 985d94fad3a5c104abb840c32127b4ad, type: 3}
+      propertyPath: m_TagString
+      value: OxygenTank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

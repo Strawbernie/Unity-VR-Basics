@@ -11,6 +11,7 @@ TagManager:
   - rightHand
   - blowtorch
   - OxygenInteractor
+  - OxygenTank
   layers:
   - Default
   - TransparentFX
