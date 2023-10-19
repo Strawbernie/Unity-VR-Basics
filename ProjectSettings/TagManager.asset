@@ -10,6 +10,7 @@ TagManager:
   - leftHand
   - rightHand
   - blowtorch
+  - OxygenInteractor
   layers:
   - Default
   - TransparentFX
