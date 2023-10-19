@@ -1,18 +1,81 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit;
 
-public class valverotation : MonoBehaviour
+public class valverotation : XRBaseInteractable
 {
-    // Start is called before the first frame update
-    public valve valve;
+    [SerializeField] private Transform wheelTransform;
 
-    // Update is called once per frame
-    void Update()
+    public UnityEvent<float> OnWheelRotated;
+
+    private float currentAngle = 0.0f;
+
+    protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-        Quaternion newRotation = Quaternion.Euler(valve.xRotation, 90f, 0f); // Assuming you only want to set the X-axis rotation
+        base.OnSelectEntered(args);
+        currentAngle = FindWheelAngle();
+    }
 
-        // Assign the new rotation to the target object's Transform
-        transform.rotation = newRotation;
+    protected override void OnSelectExited(SelectExitEventArgs args)
+    {
+        base.OnSelectExited(args);
+        currentAngle = FindWheelAngle();
+    }
+
+    public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
+    {
+        base.ProcessInteractable(updatePhase);
+
+        if (updatePhase == XRInteractionUpdateOrder.UpdatePhase.Dynamic)
+        {
+            if (isSelected)
+                RotateWheel();
+        }
+    }
+
+    private void RotateWheel()
+    {
+        // Convert that direction to an angle, then rotation
+        float totalAngle = FindWheelAngle();
+
+        // Apply difference in angle to wheel
+        float angleDifference = currentAngle - totalAngle;
+        wheelTransform.Rotate(transform.forward, -angleDifference, Space.World);
+
+        // Store angle for next process
+        currentAngle = totalAngle;
+        OnWheelRotated?.Invoke(angleDifference);
+    }
+
+    private float FindWheelAngle()
+    {
+        float totalAngle = 0;
+
+        // Combine directions of current interactors
+        foreach (IXRSelectInteractor interactor in interactorsSelecting)
+        {
+            Vector2 direction = FindLocalPoint(interactor.transform.position);
+            totalAngle += ConvertToAngle(direction) * FindRotationSensitivity();
+        }
+
+        return totalAngle;
+    }
+
+    private Vector2 FindLocalPoint(Vector3 position)
+    {
+        // Convert the hand positions to local, so we can find the angle easier
+        return transform.InverseTransformPoint(position).normalized;
+    }
+
+    private float ConvertToAngle(Vector2 direction)
+    {
+        // Use a consistent up direction to find the angle
+        return Vector2.SignedAngle(Vector2.up, direction);
+    }
+
+    private float FindRotationSensitivity()
+    {
+        // Use a smaller rotation sensitivity with two hands
+        return 1.0f / interactorsSelecting.Count;
     }
 }
