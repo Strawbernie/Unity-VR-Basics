@@ -31,6 +31,12 @@ public class TraumaInducer : MonoBehaviour
             float stress = (1 - Mathf.Pow(distance01, 2)) * MaximumStress;
             receiver.InduceStress(stress);
         }
+        yield return new WaitForSeconds(1.8f);
+        var children = transform.GetComponentsInChildren<ParticleSystem>();
+        for (var i = 0; i < children.Length; ++i)
+        {
+            Destroy(children[i]);
+        }
     }
 
     /* Search for all the particle system in the game objects children */
@@ -42,6 +48,7 @@ public class TraumaInducer : MonoBehaviour
             children[i].Play();
         }
         var current = GetComponent<ParticleSystem>();
-        if(current != null) current.Play();
+        if(current != null) Destroy(current);
+
     }
 }
