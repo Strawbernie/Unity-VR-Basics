@@ -17,6 +17,7 @@ public class Extinguisher : MonoBehaviour
     private bool holdingRight;
     private bool holdingLeft;
     public InputData inputData;
+    public GameObject PS;
     private void Start()
     {
         RightController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
@@ -50,13 +51,32 @@ public class Extinguisher : MonoBehaviour
     }
     private void CheckControllerInput(InputDevice controller)
     {
-        if (inputData._rightController.TryGetFeatureValue(CommonUsages.triggerButton, out bool Button) | inputData._leftController.TryGetFeatureValue(CommonUsages.triggerButton, out bool LeftButton))
+        if (inputData._rightController.TryGetFeatureValue(CommonUsages.triggerButton, out bool Button))
         {
-            if (holdingRight && Button | holdingLeft && LeftButton)
+            if (holdingRight && Button)
             {
-                if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, 100f)
+                PS.SetActive(true);
+                if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, 3f)
             && hit.collider.TryGetComponent(out Fire fire))
+                {
                     fire.TryExtinguish(amountExtinguishedPerSecond * Time.deltaTime);
+                }
+            }
+        }
+        if (inputData._leftController.TryGetFeatureValue(CommonUsages.triggerButton, out bool LeftButton))
+        {
+            if (holdingLeft && LeftButton)
+            {
+                PS.SetActive(true);
+                if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, 3f)
+            && hit.collider.TryGetComponent(out Fire fire))
+                {
+                    fire.TryExtinguish(amountExtinguishedPerSecond * Time.deltaTime);
+                }
+            }
+            else if (!Button && !LeftButton)
+            {
+                PS.SetActive(false);
             }
         }
     }

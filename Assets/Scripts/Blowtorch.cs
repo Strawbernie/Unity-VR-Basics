@@ -50,18 +50,24 @@ public class Blowtorch : MonoBehaviour
     }
     private void CheckControllerInput(InputDevice controller)
     {
-        if (inputData._rightController.TryGetFeatureValue(CommonUsages.triggerButton, out bool Button)|inputData._leftController.TryGetFeatureValue(CommonUsages.triggerButton, out bool LeftButton))
+        if (inputData._rightController.TryGetFeatureValue(CommonUsages.triggerButton, out bool Button))
         {
-            if (holdingRight && Button|holdingLeft && LeftButton)
+            if (holdingRight && Button)
             {
                 PS.SetActive(true);
                 //Debug.Log("Works");
             }
-            else
+        }
+        if  (inputData._leftController.TryGetFeatureValue(CommonUsages.triggerButton, out bool LeftButton))
+        {
+            if (holdingLeft && LeftButton) 
+            { 
+                PS.SetActive(true);
+            }
+            else if (!Button && !LeftButton)
             {
                 PS.SetActive(false);
             }
         }
-       
     }
     }
