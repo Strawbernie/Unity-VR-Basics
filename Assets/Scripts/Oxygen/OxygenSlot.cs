@@ -7,6 +7,7 @@ public class OxygenSlot : MonoBehaviour
     public bool hasOxygen;
     public OxygenManager oxygenManager;
     bool canbeUsed;
+    public AudioSource AS;
     private void OnTriggerStay(Collider other)
     {
         if (other.transform.tag == "OxygenTank")
@@ -27,6 +28,10 @@ public class OxygenSlot : MonoBehaviour
                 oxygenManager.CheckOxygen();
             }
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        AS.Play();
     }
     public void ActivateTank()
     {
