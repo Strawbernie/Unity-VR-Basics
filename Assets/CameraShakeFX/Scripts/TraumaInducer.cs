@@ -9,7 +9,9 @@ public class TraumaInducer : MonoBehaviour
     [Tooltip("Maximum stress the effect can inflict upon objects Range([0,1])")]
     public float MaximumStress = 0.6f;
     [Tooltip("Maximum distance in which objects are affected by this TraumaInducer")]
-    public float Range = 45;
+    public float Range = 3;
+    [SerializeField] private float explosionDamage;
+    [SerializeField] private HealthController healthController = null;
     public AudioSource AS;
 
     private IEnumerator Start()
@@ -31,6 +33,8 @@ public class TraumaInducer : MonoBehaviour
             if(distance > Range) continue;
             float distance01 = Mathf.Clamp01(distance / Range);
             float stress = (1 - Mathf.Pow(distance01, 2)) * MaximumStress;
+            healthController.currentPlayerHealth -= explosionDamage;
+            healthController.TakeDamage();
             receiver.InduceStress(stress);
         }
         yield return new WaitForSeconds(1.8f);
