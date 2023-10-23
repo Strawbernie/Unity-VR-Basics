@@ -12,6 +12,7 @@ TagManager:
   - blowtorch
   - OxygenInteractor
   - OxygenTank
+  - explosion
   layers:
   - Default
   - TransparentFX
