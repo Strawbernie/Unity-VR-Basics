@@ -15,6 +15,7 @@ public class TraumaInducer : MonoBehaviour
     public AudioSource AS;
     public DamagedWall WallToBeDamaged;
 
+
     private IEnumerator Start()
     {
         /* Wait for the specified delay */

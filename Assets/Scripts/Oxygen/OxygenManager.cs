@@ -11,8 +11,13 @@ public class OxygenManager : MonoBehaviour
     public bool isRunning2 = false;
     public bool isRunning3 = false;
     public bool NoOxygen = true;
+    public DialogueTrigger DT;
 
-public void CheckOxygen()
+    public void Start()
+    {
+       DT.TriggerDialogue();
+    }
+    public void CheckOxygen()
     {
         if (OxygenSlot1.hasOxygen && !isRunning2 && !isRunning3)
         {

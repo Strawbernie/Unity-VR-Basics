@@ -10,6 +10,10 @@ public class DamagedWall : MonoBehaviour
     public Material fixedMaterial;
     public Material damagedMaterial;
     private Renderer renderer;
+    public DialogueTrigger DT;
+    public DialogueTrigger DT2;
+    private bool newDialogue = true;
+    private bool interacted = false;
     private void Start()
     {
         renderer = GetComponent<Renderer>();
@@ -21,6 +25,7 @@ public class DamagedWall : MonoBehaviour
             hp += repairRate * Time.deltaTime;
             hp = Mathf.Clamp(hp, 0.0f, 100.0f);
             Debug.Log("" + hp);
+            interacted = true;
         }
     }
 
@@ -33,11 +38,18 @@ private void Update()
         }
         else
         {
+            repaired= false;
             renderer.material = damagedMaterial;
+        }
+        if (repaired && newDialogue && interacted)
+        {
+            newDialogue= false;
+            DT.TriggerDialogue();
         }
     }
     public void ApplyDamage()
     {
         hp = 50;
+        DT2.TriggerDialogue();
     }
 }
