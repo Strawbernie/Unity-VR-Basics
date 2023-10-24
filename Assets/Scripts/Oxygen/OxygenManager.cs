@@ -13,7 +13,7 @@ public class OxygenManager : MonoBehaviour
     public bool NoOxygen = true;
     public DialogueTrigger DT;
 
-    public void Start()
+    public void Awake()
     {
        DT.TriggerDialogue();
     }
