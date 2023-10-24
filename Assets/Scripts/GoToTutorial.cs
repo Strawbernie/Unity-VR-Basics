@@ -10,7 +10,7 @@ public class GoToTutorial : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Tutorial");
         }
     }
 }

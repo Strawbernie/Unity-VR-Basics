@@ -13,6 +13,7 @@ public class TraumaInducer : MonoBehaviour
     [SerializeField] private float explosionDamage;
     [SerializeField] private HealthController healthController = null;
     public AudioSource AS;
+    public DamagedWall WallToBeDamaged;
 
     private IEnumerator Start()
     {
@@ -21,6 +22,7 @@ public class TraumaInducer : MonoBehaviour
         /* Play all the particle system this object has */
         PlayParticles();
         AS.Play();
+        WallToBeDamaged.ApplyDamage();
 
         /* Find all gameobjects in the scene and loop through them until we find all the nearvy stress receivers */
         var targets = UnityEngine.Object.FindObjectsOfType<GameObject>();
