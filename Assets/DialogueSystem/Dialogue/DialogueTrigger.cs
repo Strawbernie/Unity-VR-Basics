@@ -6,11 +6,13 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     [SerializeField] private float DisappearTime = 3f;
+    public AudioSource AS;
 
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         StartCoroutine(EndSentence());
+        AS.Play();
     }
     IEnumerator EndSentence()
     {

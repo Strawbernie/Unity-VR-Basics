@@ -11,12 +11,10 @@ public class OxygenManager : MonoBehaviour
     public bool isRunning2 = false;
     public bool isRunning3 = false;
     public bool NoOxygen = true;
-    public DialogueTrigger DT;
+    public AudioSource AS;
+    bool isplayingAudio = false;
 
-    public void Awake()
-    {
-       DT.TriggerDialogue();
-    }
+
     public void CheckOxygen()
     {
         if (OxygenSlot1.hasOxygen && !isRunning2 && !isRunning3)
@@ -24,18 +22,34 @@ public class OxygenManager : MonoBehaviour
             isRunning1 = true;
             OxygenSlot1.ActivateTank();
             NoOxygen= false;
+            if (!isplayingAudio) 
+            { 
+                AS.Play(); 
+                isplayingAudio= true;
+            }
+            
         }
         else if (OxygenSlot2.hasOxygen && !isRunning1 && !isRunning3)
         {
             isRunning2 = true;
             OxygenSlot2.ActivateTank();
             NoOxygen = false;
+            if (!isplayingAudio)
+            {
+                AS.Play();
+                isplayingAudio = true;
+            }
         }
         else if (OxygenSlot3.hasOxygen && !isRunning1 && !isRunning2)
         {
             isRunning3 = true;
             OxygenSlot3.ActivateTank();
             NoOxygen = false;
+            if (!isplayingAudio)
+            {
+                AS.Play();
+                isplayingAudio = true;
+            }
         }
         else
         {
@@ -43,6 +57,8 @@ public class OxygenManager : MonoBehaviour
             isRunning2= false;
             isRunning3 = false;
             NoOxygen = true;
+            AS.Stop();
+            isplayingAudio= false;
         }
     }
 }

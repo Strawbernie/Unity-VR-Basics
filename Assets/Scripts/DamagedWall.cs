@@ -10,10 +10,10 @@ public class DamagedWall : MonoBehaviour
     public Material fixedMaterial;
     public Material damagedMaterial;
     private Renderer renderer;
-    public DialogueTrigger DT;
-    public DialogueTrigger DT2;
     private bool newDialogue = true;
     private bool interacted = false;
+    public bool DTtriggered = false;
+    public bool DTtriggered2 = false;
     private void Start()
     {
         renderer = GetComponent<Renderer>();
@@ -44,12 +44,12 @@ private void Update()
         if (repaired && newDialogue && interacted)
         {
             newDialogue= false;
-            DT.TriggerDialogue();
+            DTtriggered = true;
         }
     }
     public void ApplyDamage()
     {
         hp = 50;
-        DT2.TriggerDialogue();
+        DTtriggered2= true;
     }
 }
