@@ -7,12 +7,6 @@ public class GuideArrow : MonoBehaviour
     public Transform target;
     public float speed;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         Quaternion _lookRotation = Quaternion.LookRotation((target.position - transform.position).normalized);

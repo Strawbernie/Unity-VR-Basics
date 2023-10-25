@@ -13,6 +13,7 @@ public class PipeSnap : MonoBehaviour
     private XRSocketInteractor interactor;
     private Transform gfx;
     public bool correctPiece;
+    public Vector3 correctDesire;
 
     private void Start()
     {
@@ -35,9 +36,21 @@ public class PipeSnap : MonoBehaviour
     {
         if (interactor.GetOldestInteractableSelected() != null && interactor.GetOldestInteractableSelected().transform.TryGetComponent(out Pipe pipe))
         {
-            gfx.transform.rotation = pipe.SnapToDesire();
-            if (pipe.typeIndex == typeIndex) correctPiece = true;
-            else correctPiece = false;
+
+            if (pipe.typeIndex == typeIndex)
+            {
+                // Snap to correct desire
+                gfx.transform.rotation = Quaternion.Euler(correctDesire);
+                correctPiece = true;
+                print("Snapped correct");
+            }
+            else
+            {
+                // Snap to pipe desire as to not look weird
+                gfx.transform.rotation = pipe.SnapToDesire();
+                correctPiece = false;
+                print("Snapped desire");
+            }
         }
     }
 

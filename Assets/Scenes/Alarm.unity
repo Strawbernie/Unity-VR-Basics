@@ -1875,7 +1875,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2486232235952826996, guid: 4c7da787a6e653d469f823b3338559ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.192
+      value: 1.799
       objectReference: {fileID: 0}
     - target: {fileID: 2486232235952826996, guid: 4c7da787a6e653d469f823b3338559ea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2669,7 +2669,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 701398047870439659, guid: d0706fef344d4754298020968a430e53, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.135
+      value: -1.79
       objectReference: {fileID: 0}
     - target: {fileID: 701398047870439659, guid: d0706fef344d4754298020968a430e53, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2677,7 +2677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 701398047870439659, guid: d0706fef344d4754298020968a430e53, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.84
+      value: 6.38
       objectReference: {fileID: 0}
     - target: {fileID: 701398047870439659, guid: d0706fef344d4754298020968a430e53, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3438,19 +3438,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 458224372847348618, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1825280435}
     - target: {fileID: 889325725284500271, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1825280435}
-    - target: {fileID: 3919603477360271098, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1825280435}
-    - target: {fileID: 4033086175575830319, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1825280435}
@@ -3773,7 +3761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2486232235952826996, guid: 4c7da787a6e653d469f823b3338559ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7
+      value: 0.447
       objectReference: {fileID: 0}
     - target: {fileID: 2486232235952826996, guid: 4c7da787a6e653d469f823b3338559ea, type: 3}
       propertyPath: m_LocalPosition.z
