@@ -14,6 +14,7 @@ public class DamagedWall : MonoBehaviour
     private bool interacted = false;
     public bool DTtriggered = false;
     public bool DTtriggered2 = false;
+    public ShipHealth shiphealth;
     private void Start()
     {
         renderer = GetComponent<Renderer>();
@@ -44,6 +45,7 @@ private void Update()
         if (repaired && newDialogue && interacted)
         {
             newDialogue= false;
+            shiphealth.SetHealth(shiphealth.Health = shiphealth.Health+ 10);
             DTtriggered = true;
         }
     }
@@ -51,5 +53,6 @@ private void Update()
     {
         hp = 50;
         DTtriggered2= true;
+        shiphealth.SetHealth(shiphealth.Health = shiphealth.Health - 10);
     }
 }
