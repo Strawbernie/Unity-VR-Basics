@@ -11,7 +11,7 @@ public class DamageController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            healthController.currentPlayerHealth -= explosionDamage;
+            healthController.currentPlayerHealth -= explosionDamage * Difficulty.difficulty;
             healthController.TakeDamage();
             gameObject.GetComponent<SphereCollider>().enabled = false;
         }

@@ -45,7 +45,7 @@ private void Update()
         if (repaired && newDialogue && interacted)
         {
             newDialogue= false;
-            shiphealth.SetHealth(shiphealth.Health = shiphealth.Health+ 10);
+            shiphealth.SetHealth(shiphealth.Health = shiphealth.Health+ 10 * Difficulty.difficulty);
             DTtriggered = true;
         }
     }
@@ -53,6 +53,6 @@ private void Update()
     {
         hp = 50;
         DTtriggered2= true;
-        shiphealth.SetHealth(shiphealth.Health = shiphealth.Health - 10);
+        shiphealth.SetHealth(shiphealth.Health = shiphealth.Health - 10 * Difficulty.difficulty);
     }
 }

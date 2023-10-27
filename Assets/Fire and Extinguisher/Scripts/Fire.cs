@@ -32,7 +32,7 @@ public class Fire : MonoBehaviour
     {
         if (isLit && currentIntensity < 1.0f && Time.time - timeLastWatered >= regenDelay)
         {
-            currentIntensity += regenRate * Time.deltaTime;
+            currentIntensity += regenRate* Difficulty.difficulty * Time.deltaTime;
             ChangeIntensity();
         }
     }
