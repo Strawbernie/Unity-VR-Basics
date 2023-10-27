@@ -42,10 +42,11 @@ private void Update()
             repaired= false;
             renderer.material = damagedMaterial;
         }
-        if (repaired && newDialogue && interacted)
+        if (repaired && newDialogue && interacted && DTtriggered2)
         {
             newDialogue= false;
             shiphealth.SetHealth(shiphealth.Health = shiphealth.Health+ 10 * Difficulty.difficulty);
+            ScoreManager.Score = ScoreManager.Score + 30;
             DTtriggered = true;
         }
     }

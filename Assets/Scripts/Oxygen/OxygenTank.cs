@@ -8,6 +8,7 @@ public class OxygenTank : MonoBehaviour
     float OxygenDecrease = 0.08f;
     public Transform OxygenMeter;
     public bool isEmpty;
+    bool receivedPoints = false;
     public void DepleteOxygen()
     {
         if (OxygenLeft > 0.0f)
@@ -17,6 +18,15 @@ public class OxygenTank : MonoBehaviour
             Vector3 newScale = OxygenMeter.localScale;
             newScale.y = OxygenLeft/33;
             OxygenMeter.localScale = newScale;
+            AddScore();
+        }
+    }
+    private void AddScore()
+    {
+        if (!receivedPoints)
+        {
+            ScoreManager.Score = ScoreManager.Score + 10;
+            receivedPoints = true;
         }
     }
 }

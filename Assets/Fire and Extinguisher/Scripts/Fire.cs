@@ -11,10 +11,11 @@ public class Fire : MonoBehaviour
     float timeLastWatered = 0;
     [SerializeField] private float regenDelay = 2.5f;
     [SerializeField] private float regenRate = .1f;
-
+    
     [SerializeField] private ParticleSystem [] fireParticleSystems = new ParticleSystem[0];
 
     public bool isLit = true;
+    public bool receivedPoints = false;
 
     private void Start()
     {
@@ -48,6 +49,11 @@ public class Fire : MonoBehaviour
         if (currentIntensity <= 0)
         {
             isLit = false;
+            if (!receivedPoints)
+            {
+                ScoreManager.Score = ScoreManager.Score + 30;
+                receivedPoints= true;
+            }
             return true;
         }
 

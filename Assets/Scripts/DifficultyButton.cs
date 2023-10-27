@@ -11,6 +11,10 @@ public class DifficultyButton : MonoBehaviour
     public string newtext;
     public Color newColor;
     // Start is called before the first frame update
+    private void Start()
+    {
+        ScoreManager.Score = 0;
+    }
     public void OnPress()
     {
         if (Difficulty.difficulty == newdifficulty)

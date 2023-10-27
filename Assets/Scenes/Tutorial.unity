@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42537087, g: 0.46299684, b: 0.5608342, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16528,6 +16528,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6775264678749081124, guid: 2f01686c981f927429fc63a134cb3938, type: 3}
       insertIndex: -1
       addedObject: {fileID: 824058688}
+    - targetCorrespondingSourceObject: {fileID: -6775264678749081124, guid: 2f01686c981f927429fc63a134cb3938, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1614689523}
+    - targetCorrespondingSourceObject: {fileID: -6775264678749081124, guid: 2f01686c981f927429fc63a134cb3938, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1614689522}
     - targetCorrespondingSourceObject: {fileID: 5923066911678597609, guid: 2f01686c981f927429fc63a134cb3938, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1631059228}
@@ -26705,6 +26711,48 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.8099511, z: 1}
   m_Center: {x: 0, y: 0.4049754, z: 0}
+--- !u!65 &1614689522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924848779}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9443417, y: 9.532024, z: 1.3097}
+  m_Center: {x: -0.88022804, y: 2.9545994, z: -19.629486}
+--- !u!65 &1614689523
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924848779}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.075923, y: 9.140131, z: 1.5851879}
+  m_Center: {x: -1.0611386, y: 3.150546, z: -26.567604}
 --- !u!1 &1616453563
 GameObject:
   m_ObjectHideFlags: 0
