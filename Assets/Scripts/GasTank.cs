@@ -8,6 +8,7 @@ public class GasTank : MonoBehaviour
     public float value;
     public Slider progressSlider;
     public ParticleSystem fuelVFX;
+    bool Gotpoints = false;
 
     public void FuelUp(float amount)
     {
@@ -24,6 +25,11 @@ public class GasTank : MonoBehaviour
         {
             if (fuelVFX.isPlaying) fuelVFX.Stop();
             return;
+        }
+        if (value >= 100 && !Gotpoints)
+        {
+            Gotpoints= true;
+            ScoreManager.Score = ScoreManager.Score + 60;
         }
 
         if (transform.eulerAngles.z > 225 && transform.eulerAngles.z < 315)
