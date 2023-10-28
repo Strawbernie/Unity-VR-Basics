@@ -31167,12 +31167,20 @@ PrefabInstance:
       value: GasTank
       objectReference: {fileID: 0}
     - target: {fileID: 5063294853554197284, guid: 5ce5c4264e5cd624185e7d0384d1e33a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063294853554197284, guid: 5ce5c4264e5cd624185e7d0384d1e33a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063294853554197284, guid: 5ce5c4264e5cd624185e7d0384d1e33a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5487609
       objectReference: {fileID: 0}
     - target: {fileID: 5063294853554197284, guid: 5ce5c4264e5cd624185e7d0384d1e33a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.365
       objectReference: {fileID: 0}
     - target: {fileID: 5063294853554197284, guid: 5ce5c4264e5cd624185e7d0384d1e33a, type: 3}
       propertyPath: m_LocalPosition.z
