@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4882974431419121331}
   - component: {fileID: 8442706545501899997}
   - component: {fileID: 8531233615288489756}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PipeStraight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 65
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1

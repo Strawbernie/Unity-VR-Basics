@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2250699665068529112}
   - component: {fileID: 3400789472217776288}
   - component: {fileID: 4617631532806040678}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PipePlus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 65
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
