@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Alarm : MonoBehaviour
 {
+    public float speed;
     GameObject lights;
 
     void Start()
@@ -11,9 +12,9 @@ public class Alarm : MonoBehaviour
         lights = transform.GetChild(0).gameObject;    
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (lights.activeInHierarchy) lights.transform.Rotate(Vector3.up, .5f);
+        if (lights.activeInHierarchy) lights.transform.Rotate(Vector3.up, speed);
     }
 
     public void Switch() => lights.SetActive(!lights.activeInHierarchy);

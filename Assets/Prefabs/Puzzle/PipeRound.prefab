@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5823330175120922453}
   - component: {fileID: 8151939095546158740}
   - component: {fileID: 8133213882476545118}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PipeRound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 65
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
