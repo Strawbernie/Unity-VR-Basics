@@ -6,6 +6,7 @@ public class Alarm : MonoBehaviour
 {
     public float speed;
     GameObject lights;
+    public AlarmTrigger AT;
 
     void Start()
     {
@@ -14,6 +15,18 @@ public class Alarm : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(AT.OnFire)
+        {
+            lights.SetActive(true);
+        }
+        else if (AT.Explosion)
+        {
+            lights.SetActive(true);
+        }
+        else
+        {
+            lights.SetActive(false);
+        }
         if (lights.activeInHierarchy) lights.transform.Rotate(Vector3.up, speed);
     }
 

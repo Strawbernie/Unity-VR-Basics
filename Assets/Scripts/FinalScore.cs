@@ -7,6 +7,7 @@ using TMPro;
 public class FinalScore : MonoBehaviour
 {
     float multiplier;
+    float speedmultiplier;
     public TextMeshProUGUI rating;
     public TextMeshProUGUI score;
     public string SText;
@@ -19,6 +20,7 @@ public class FinalScore : MonoBehaviour
     public Color CColor;
     public string FText;
     public Color FColor;
+    
     // Start is called before the first frame update
     public void Start()
     {
@@ -38,24 +40,25 @@ public class FinalScore : MonoBehaviour
         {
             multiplier= 1;
         }
-        ScoreManager.Score = ScoreManager.Score * multiplier;
+        speedmultiplier = ScoreManager.TimeLeft / 100;
+        ScoreManager.Score = ScoreManager.Score * multiplier * speedmultiplier;
         score.text = (ScoreManager.Score +"points");
-        if (ScoreManager.Score >= 100)
+        if (ScoreManager.Score >= 350)
         {
             rating.text = SText;
             rating.color = SColor;
         }
-        else if (ScoreManager.Score>=75 && ScoreManager.Score< 100)
+        else if (ScoreManager.Score>=300 && ScoreManager.Score< 250)
         {
             rating.color = AColor;
             rating.text = AText;
         }
-        else if (ScoreManager.Score >= 50 && ScoreManager.Score < 75)
+        else if (ScoreManager.Score >= 250 && ScoreManager.Score < 150)
         {
             rating.color = BColor;
             rating.text = BText;
         }
-        else if (ScoreManager.Score >= 25 && ScoreManager.Score < 50)
+        else if (ScoreManager.Score >= 150 && ScoreManager.Score < 100)
         {
             rating.color = CColor;
             rating.text = CText;

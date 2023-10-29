@@ -8,6 +8,8 @@ public class ScoreManager : MonoBehaviour
     public static float Score;
     public bool tasksDone = false;
     public Fire fire;
+    public static float TimeLeft = 200.0f;
+    public float TimeDecrease = 0.05f;
     private void Start()
     {
         Score = 0;
@@ -20,7 +22,12 @@ public class ScoreManager : MonoBehaviour
         }
         if(tasksDone)
         {
-            SceneManager.LoadScene("ScoreScreen");
+            //SceneManager.LoadScene("ScoreScreen");
+        }
+        TimeLeft = TimeLeft - TimeDecrease * Time.deltaTime;
+        if (TimeLeft <= 100.0f)
+        {
+            TimeLeft = 100f;
         }
     }
 }

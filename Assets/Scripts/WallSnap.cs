@@ -9,7 +9,20 @@ public class WallSnap : MonoBehaviour
     bool GunComplete = false;
     public PipeSnap[] pipes;
     bool PipeComplete = false;
+    public GameObject parentObject;
+    GameObject Arrow;
+    public GameObject prefabToInstantiate;
 
+    public void Start()
+    {
+        if (parentObject != null && prefabToInstantiate != null)
+        {
+            GameObject newChildObject = Instantiate(prefabToInstantiate);
+            Arrow = newChildObject;
+            newChildObject.transform.parent = parentObject.transform;
+            Arrow.GetComponent<GuideArrow>().target = transform;
+        }
+    }
     public void CheckIfComplete()
     {
         for (int i = 0; i < interactors.Length; i++)
@@ -20,6 +33,7 @@ public class WallSnap : MonoBehaviour
         {
             GunComplete = true;
             ScoreManager.Score = ScoreManager.Score + 80;
+            Arrow.SetActive(false);
         }
         print("Task completed");
     }
@@ -34,6 +48,7 @@ public class WallSnap : MonoBehaviour
         {
             PipeComplete= true;
             ScoreManager.Score = ScoreManager.Score + 80;
+            Arrow.SetActive(false);
         }
         print("Task completed");
     }

@@ -13,17 +13,27 @@ public class Fire : MonoBehaviour
     [SerializeField] private float regenRate = .1f;
     
     [SerializeField] private ParticleSystem [] fireParticleSystems = new ParticleSystem[0];
-
+    public GameObject parentObject;
+    public GameObject prefabToInstantiate;
     public bool isLit = true;
     public bool receivedPoints = false;
+    public AlarmTrigger alarm;
+    GameObject Arrow;
 
     private void Start()
     {
-        startIntensities = new float[fireParticleSystems.Length];
 
+        startIntensities = new float[fireParticleSystems.Length];
         for (int i = 0; i < fireParticleSystems.Length; i++)
         {
             startIntensities[i] = fireParticleSystems[i].emission.rateOverTime.constant;
+        }
+        if (parentObject != null && prefabToInstantiate != null)
+        {
+            GameObject newChildObject = Instantiate(prefabToInstantiate);
+            Arrow = newChildObject;
+            newChildObject.transform.parent = parentObject.transform;
+            Arrow.GetComponent<GuideArrow>().target = transform;
         }
     }
 
@@ -35,6 +45,10 @@ public class Fire : MonoBehaviour
         {
             currentIntensity += regenRate* Difficulty.difficulty * Time.deltaTime;
             ChangeIntensity();
+        }
+        if (isLit)
+        {
+            alarm.OnFire = true;
         }
     }
 
@@ -53,6 +67,8 @@ public class Fire : MonoBehaviour
             {
                 ScoreManager.Score = ScoreManager.Score + 30;
                 receivedPoints= true;
+                Arrow.SetActive(false);
+                alarm.OnFire = false;
             }
             return true;
         }
