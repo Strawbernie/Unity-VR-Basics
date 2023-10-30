@@ -66,8 +66,8 @@ public class Fire : MonoBehaviour
             if (!receivedPoints)
             {
                 ScoreManager.Score = ScoreManager.Score + 30;
-                receivedPoints= true;
-                Arrow.SetActive(false);
+                Destroy(Arrow);
+                receivedPoints = true;
                 alarm.OnFire = false;
             }
             return true;

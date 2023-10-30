@@ -17979,7 +17979,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tasksDone: 0
-  fire: {fileID: 1071628288}
   TimeDecrease: 0.08
 --- !u!64 &861021235
 MeshCollider:
@@ -20060,6 +20059,10 @@ PrefabInstance:
       value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7031206034229341037, guid: 0375bfeb1ba07f04f889c474707305dd, type: 3}
+      propertyPath: SM
+      value: 
+      objectReference: {fileID: 858998261}
+    - target: {fileID: 7031206034229341037, guid: 0375bfeb1ba07f04f889c474707305dd, type: 3}
       propertyPath: parentObject
       value: 
       objectReference: {fileID: 2074672363}
@@ -20575,6 +20578,7 @@ MonoBehaviour:
   parentObject: {fileID: 2074672363}
   prefabToInstantiate: {fileID: 3704760919794145040, guid: 5bd54ab88b682ae4dbdc8c76c0e1ff73, type: 3}
   alarm: {fileID: 730343825}
+  SM: {fileID: 858998261}
 --- !u!65 &987030935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21406,6 +21410,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1325421977835789085, guid: f36e773e46669764ba35bdb14995b83b, type: 3}
+      propertyPath: SM
+      value: 
+      objectReference: {fileID: 858998261}
+    - target: {fileID: 1325421977835789085, guid: f36e773e46669764ba35bdb14995b83b, type: 3}
       propertyPath: alarm
       value: 
       objectReference: {fileID: 730343825}
@@ -21470,17 +21478,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f36e773e46669764ba35bdb14995b83b, type: 3}
---- !u!114 &1071628288 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1325421977835789085, guid: f36e773e46669764ba35bdb14995b83b, type: 3}
-  m_PrefabInstance: {fileID: 1071628287}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73716cd0fa56fe240ae7cb1af4850184, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1071864812
 GameObject:
   m_ObjectHideFlags: 0
@@ -24114,6 +24111,7 @@ MonoBehaviour:
   isRunning3: 0
   NoOxygen: 0
   AS: {fileID: 1352087050}
+  SM: {fileID: 0}
 --- !u!1 &1251074555
 GameObject:
   m_ObjectHideFlags: 0
@@ -29477,6 +29475,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -1.987
       objectReference: {fileID: 0}
+    - target: {fileID: 8046132845365111171, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
+      propertyPath: SM
+      value: 
+      objectReference: {fileID: 858998261}
     - target: {fileID: 8046132845365111171, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: parentObject
       value: 
@@ -37653,7 +37655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3704760919794145040, guid: 5bd54ab88b682ae4dbdc8c76c0e1ff73, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4073963799081503915, guid: 5bd54ab88b682ae4dbdc8c76c0e1ff73, type: 3}
       propertyPath: target

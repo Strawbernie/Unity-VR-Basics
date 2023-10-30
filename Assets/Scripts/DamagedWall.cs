@@ -20,6 +20,7 @@ public class DamagedWall : MonoBehaviour
     public GameObject prefabToInstantiate;
     GameObject Arrow;
     public AlarmTrigger alarm;
+    public ScoreManager SM;
     private void Start()
     {
         renderer = GetComponent<Renderer>();
@@ -53,8 +54,8 @@ private void Update()
             newDialogue= false;
             shiphealth.SetHealth(shiphealth.Health = shiphealth.Health+ 10 * Difficulty.difficulty);
             ScoreManager.Score = ScoreManager.Score + 30;
+            Destroy(Arrow);
             DTtriggered = true;
-            Arrow.SetActive(false);
             alarm.Explosion = false;
         }
     }

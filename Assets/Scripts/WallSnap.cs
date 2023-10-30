@@ -33,7 +33,7 @@ public class WallSnap : MonoBehaviour
         {
             GunComplete = true;
             ScoreManager.Score = ScoreManager.Score + 80;
-            Arrow.SetActive(false);
+            Destroy(Arrow);
         }
         print("Task completed");
     }
@@ -48,7 +48,7 @@ public class WallSnap : MonoBehaviour
         {
             PipeComplete= true;
             ScoreManager.Score = ScoreManager.Score + 80;
-            Arrow.SetActive(false);
+            Destroy(Arrow);
         }
         print("Task completed");
     }
