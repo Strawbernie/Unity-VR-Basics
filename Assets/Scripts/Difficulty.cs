@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Difficulty : MonoBehaviour
 {
-    public static int difficulty;
+    public static int difficulty = 1;
 }

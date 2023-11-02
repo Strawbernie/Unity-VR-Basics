@@ -16,7 +16,7 @@ public class OxygenTank : MonoBehaviour
             OxygenLeft = OxygenLeft - OxygenDecrease * Difficulty.difficulty * Time.deltaTime;
             Debug.Log("Oxygen Left:" + OxygenLeft);
             Vector3 newScale = OxygenMeter.localScale;
-            newScale.y = OxygenLeft/33;
+            newScale.y = OxygenLeft/3300;
             OxygenMeter.localScale = newScale;
             AddScore();
         }
