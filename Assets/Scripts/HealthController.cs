@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
@@ -13,10 +14,13 @@ public class HealthController : MonoBehaviour
     [SerializeField] private Image hurtImage = null;
     [SerializeField] private float hurtTimer = 0.1f;
     [SerializeField] private AudioClip hurtAudio = null;
+    public AudioSource chokeAudio;
+    bool playingChokeAudio;
     private AudioSource healthAudioSource;
     [SerializeField] private float healCooldown = 3.0f;
     [SerializeField] private float maxHealCooldown = 3.0f;
     [SerializeField] private bool startCooldown = false;
+    public OxygenManager oxygenManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,7 +63,22 @@ public class HealthController : MonoBehaviour
                 startCooldown= false;
             }
         }
-
+        if (oxygenManager.NoOxygen)
+        {
+            canRegen = false;
+            currentPlayerHealth = currentPlayerHealth - .1f * Difficulty.difficulty;
+            if (!playingChokeAudio)
+            {
+                playingChokeAudio = true;
+                chokeAudio.Play();
+            }
+        }
+        else
+        {
+            canRegen = true;
+            playingChokeAudio = false;
+            chokeAudio.Stop();
+        }
         if (canRegen)
         {
             if (currentPlayerHealth <= maxPlayerHealth - 0.01)
@@ -73,6 +92,10 @@ public class HealthController : MonoBehaviour
                 healCooldown = maxHealCooldown;
                 canRegen= false;
             }
+        }
+        if (currentPlayerHealth <= 0)
+        {
+            SceneManager.LoadScene("LoseScreen");
         }
     }
 }

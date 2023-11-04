@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ShipHealth : MonoBehaviour
@@ -13,7 +14,7 @@ public class ShipHealth : MonoBehaviour
     {
         if (Health <= 0)
         {
-            //you lose
+            SceneManager.LoadScene("LoseScreen");
         }
     }
     public void SetHealth(float Health)

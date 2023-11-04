@@ -16,6 +16,7 @@ public class OxygenManager : MonoBehaviour
     public GameObject parentObject;
     public GameObject prefabToInstantiate;
     public GameObject mainFrame;
+    public HealthController healthController;
     GameObject Arrow;
     public Vector3 offset;
     bool arrowActive = false;

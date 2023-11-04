@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScoreScreen.unity
     guid: cc0342aa90379144dbcecc162cea063b
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: 2ddd1761a18922945b84f4c3cdb25dd0
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5861c8843323b70469ab6e4102e38270, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4afaf9223db5a1e4d97cb3a230314d02, type: 2}
