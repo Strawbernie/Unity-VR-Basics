@@ -20,6 +20,7 @@ public class Fire : MonoBehaviour
     public AlarmTrigger alarm;
     GameObject Arrow;
     public Vector3 offset;
+    public ShipHealth shiphealth;
 
     private void Start()
     {
@@ -52,6 +53,7 @@ public class Fire : MonoBehaviour
         if (isLit)
         {
             alarm.OnFire = true;
+            shiphealth.SetHealth(shiphealth.Health = shiphealth.Health - 0.008f * Difficulty.difficulty);
         }
     }
 

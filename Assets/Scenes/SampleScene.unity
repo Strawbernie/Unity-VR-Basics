@@ -15417,6 +15417,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1928207215451761010, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
+      propertyPath: shiphealth
+      value: 
+      objectReference: {fileID: 515504439}
+    - target: {fileID: 1928207215451761010, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
       propertyPath: parentObject
       value: 
       objectReference: {fileID: 2074672363}
@@ -15433,6 +15437,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3752433476100872591, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
+      propertyPath: shiphealth
+      value: 
+      objectReference: {fileID: 515504439}
+    - target: {fileID: 3752433476100872591, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
       propertyPath: parentObject
       value: 
       objectReference: {fileID: 2074672363}
@@ -15449,6 +15457,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5134862973020662034, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
+      propertyPath: shiphealth
+      value: 
+      objectReference: {fileID: 515504439}
+    - target: {fileID: 5134862973020662034, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
       propertyPath: parentObject
       value: 
       objectReference: {fileID: 2074672363}
@@ -15465,6 +15477,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5140856535714249342, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
+      propertyPath: shiphealth
+      value: 
+      objectReference: {fileID: 515504439}
+    - target: {fileID: 5140856535714249342, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
       propertyPath: parentObject
       value: 
       objectReference: {fileID: 2074672363}
@@ -15481,6 +15497,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5240121478871749071, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
+      propertyPath: shiphealth
+      value: 
+      objectReference: {fileID: 515504439}
+    - target: {fileID: 5240121478871749071, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
       propertyPath: parentObject
       value: 
       objectReference: {fileID: 2074672363}
@@ -15497,6 +15517,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5469988123438127336, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
+      propertyPath: shiphealth
+      value: 
+      objectReference: {fileID: 515504439}
+    - target: {fileID: 5469988123438127336, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
       propertyPath: parentObject
       value: 
       objectReference: {fileID: 2074672363}
@@ -15512,6 +15536,10 @@ PrefabInstance:
       propertyPath: offset.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5843885770838052621, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
+      propertyPath: shiphealth
+      value: 
+      objectReference: {fileID: 515504439}
     - target: {fileID: 5843885770838052621, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
       propertyPath: parentObject
       value: 
@@ -15609,6 +15637,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7716856519677262581, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
+      propertyPath: shiphealth
+      value: 
+      objectReference: {fileID: 515504439}
+    - target: {fileID: 7716856519677262581, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
       propertyPath: parentObject
       value: 
       objectReference: {fileID: 2074672363}
@@ -15625,6 +15657,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7732875321055989589, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
+      propertyPath: shiphealth
+      value: 
+      objectReference: {fileID: 515504439}
+    - target: {fileID: 7732875321055989589, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
       propertyPath: parentObject
       value: 
       objectReference: {fileID: 2074672363}
@@ -15640,6 +15676,10 @@ PrefabInstance:
       propertyPath: offset.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8830068365622395835, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
+      propertyPath: shiphealth
+      value: 
+      objectReference: {fileID: 515504439}
     - target: {fileID: 8830068365622395835, guid: 66efd9cb4a7d39340a1c85f08f205441, type: 3}
       propertyPath: parentObject
       value: 
@@ -56610,7 +56650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7513ad2bcb2a2b4fb83caa68968f5c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.45
+      value: -1.035
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7513ad2bcb2a2b4fb83caa68968f5c0, type: 3}
       propertyPath: m_LocalPosition.y
