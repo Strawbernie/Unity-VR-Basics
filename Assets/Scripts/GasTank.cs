@@ -9,6 +9,7 @@ public class GasTank : MonoBehaviour
     public Slider progressSlider;
     public ParticleSystem fuelVFX;
     bool Gotpoints = false;
+    bool filledUP = false;
     public GameObject parentObject;
     public GameObject prefabToInstantiate;
     public GameObject FuelStation;
@@ -43,13 +44,14 @@ public class GasTank : MonoBehaviour
         {
             holding = false;
         }
-        if (other.transform.tag == "Engine" && holding && !Gotpoints && value > 0)
+        if (other.transform.tag == "Engine" && Gotpoints && value > 0)
         {
             value -= 10;
         }
-        else if (other.transform.tag == "Engine" && holding && Gotpoints && value<=0)
+        else if (other.transform.tag == "Engine" && !Gotpoints && filledUP&& value<=0)
         {
             ScoreManager.Score = ScoreManager.Score + 60;
+            Gotpoints= true;
             Destroy(Arrow);
         }
     }
@@ -69,9 +71,9 @@ public class GasTank : MonoBehaviour
             if (fuelVFX.isPlaying) fuelVFX.Stop();
             return;
         }
-        if (value >= 100 && !Gotpoints)
+        if (value >= 100 && !filledUP)
         {
-            Gotpoints= true;
+            filledUP= true;
         }
         if (holding && value <= 0)
         {

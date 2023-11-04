@@ -13,8 +13,17 @@ public class OxygenManager : MonoBehaviour
     public bool NoOxygen = true;
     public AudioSource AS;
     bool isplayingAudio = false;
+    public GameObject parentObject;
+    public GameObject prefabToInstantiate;
+    public GameObject mainFrame;
+    GameObject Arrow;
+    public Vector3 offset;
+    bool arrowActive = false;
 
-
+    private void Start()
+    {
+        CheckOxygen();
+    }
     public void CheckOxygen()
     {
         if (OxygenSlot1.hasOxygen && !isRunning2 && !isRunning3)
@@ -59,6 +68,24 @@ public class OxygenManager : MonoBehaviour
             NoOxygen = true;
             AS.Stop();
             isplayingAudio= false;
+        }
+        if (NoOxygen)
+        {
+            if (parentObject != null && prefabToInstantiate != null &&!arrowActive)
+            {
+                Vector3 playerPosition = parentObject.transform.position;
+                Vector3 spawnPosition = playerPosition + offset;
+                GameObject newChildObject = Instantiate(prefabToInstantiate, spawnPosition, Quaternion.identity);
+                Arrow = newChildObject;
+                newChildObject.transform.parent = parentObject.transform;
+                Arrow.GetComponent<GuideArrow>().target = mainFrame.transform;
+                arrowActive= true;
+            }
+        }
+        else if (!NoOxygen)
+        {
+            Destroy(Arrow);
+            arrowActive = false;
         }
     }
 }
