@@ -43,22 +43,22 @@ public class FinalScore : MonoBehaviour
         speedmultiplier = ScoreManager.TimeLeft / 100;
         ScoreManager.Score = ScoreManager.Score * multiplier * speedmultiplier;
         score.text = (ScoreManager.Score +"points");
-        if (ScoreManager.Score >= 350)
+        if (ScoreManager.Score >= 850)
         {
             rating.text = SText;
             rating.color = SColor;
         }
-        else if (ScoreManager.Score>=300 && ScoreManager.Score< 250)
+        else if (ScoreManager.Score>=850 && ScoreManager.Score< 650)
         {
             rating.color = AColor;
             rating.text = AText;
         }
-        else if (ScoreManager.Score >= 250 && ScoreManager.Score < 150)
+        else if (ScoreManager.Score >= 650 && ScoreManager.Score < 450)
         {
             rating.color = BColor;
             rating.text = BText;
         }
-        else if (ScoreManager.Score >= 150 && ScoreManager.Score < 100)
+        else if (ScoreManager.Score >= 450 && ScoreManager.Score < 300)
         {
             rating.color = CColor;
             rating.text = CText;

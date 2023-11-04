@@ -5,7 +5,7 @@ using UnityEngine;
 public class OxygenTank : MonoBehaviour
 {
     public float OxygenLeft = 100.0f;
-    float OxygenDecrease = 0.5f;
+    float OxygenDecrease = 0.3f;
     public Transform OxygenMeter;
     public bool isEmpty;
     bool receivedPoints = false;
