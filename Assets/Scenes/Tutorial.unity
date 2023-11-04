@@ -25191,6 +25191,7 @@ MonoBehaviour:
   prefabToInstantiate: {fileID: 0}
   alarm: {fileID: 1601434655}
   SM: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1003689717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37142,7 +37143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputData: {fileID: 806256750}
   Camera1: {fileID: 1735802101}
-  Ypos: 1.25
+  Ypos: 1
 --- !u!65 &1737237510
 BoxCollider:
   m_ObjectHideFlags: 0

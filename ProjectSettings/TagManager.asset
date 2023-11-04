@@ -13,6 +13,7 @@ TagManager:
   - OxygenInteractor
   - OxygenTank
   - explosion
+  - Engine
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
@@ -24,6 +23,7 @@ public class DamagedWall : MonoBehaviour
     GameObject Arrow;
     public AlarmTrigger alarm;
     public ScoreManager SM;
+    public Vector3 offset;
 
     private void Start()
     {
@@ -102,9 +102,11 @@ private void Update()
     {
         if (parentObject != null && prefabToInstantiate != null)
         {
-            GameObject newChildObject = Instantiate(prefabToInstantiate);
-            newChildObject.transform.parent = parentObject.transform;
+            Vector3 playerPosition = parentObject.transform.position;
+            Vector3 spawnPosition = playerPosition + offset;
+            GameObject newChildObject = Instantiate(prefabToInstantiate, spawnPosition, Quaternion.identity);
             Arrow = newChildObject;
+            newChildObject.transform.parent = parentObject.transform;
             Arrow.GetComponent<GuideArrow>().target = transform;
         }
         hp = 50;

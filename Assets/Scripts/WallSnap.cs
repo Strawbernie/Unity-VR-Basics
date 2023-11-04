@@ -15,15 +15,20 @@ public class WallSnap : MonoBehaviour
     public Animator m_Animator;
     public GameObject PS;
     public GameObject PS1;
-
+    public Vector3 offset;
     public void Start()
     {
         if (parentObject != null && prefabToInstantiate != null)
         {
-            GameObject newChildObject = Instantiate(prefabToInstantiate);
-            Arrow = newChildObject;
-            newChildObject.transform.parent = parentObject.transform;
-            Arrow.GetComponent<GuideArrow>().target = transform;
+            if (parentObject != null && prefabToInstantiate != null)
+            {
+                Vector3 playerPosition = parentObject.transform.position;
+                Vector3 spawnPosition = playerPosition + offset;
+                GameObject newChildObject = Instantiate(prefabToInstantiate, spawnPosition, Quaternion.identity);
+                Arrow = newChildObject;
+                newChildObject.transform.parent = parentObject.transform;
+                Arrow.GetComponent<GuideArrow>().target = transform;
+            }
         }
         PS.SetActive(false);
         PS1.SetActive(false);

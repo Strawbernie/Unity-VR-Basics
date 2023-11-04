@@ -19,6 +19,7 @@ public class Fire : MonoBehaviour
     public bool receivedPoints = false;
     public AlarmTrigger alarm;
     GameObject Arrow;
+    public Vector3 offset;
 
     private void Start()
     {
@@ -30,7 +31,9 @@ public class Fire : MonoBehaviour
         }
         if (parentObject != null && prefabToInstantiate != null)
         {
-            GameObject newChildObject = Instantiate(prefabToInstantiate);
+            Vector3 playerPosition = parentObject.transform.position;
+            Vector3 spawnPosition = playerPosition + offset;
+            GameObject newChildObject = Instantiate(prefabToInstantiate, spawnPosition, Quaternion.identity);
             Arrow = newChildObject;
             newChildObject.transform.parent = parentObject.transform;
             Arrow.GetComponent<GuideArrow>().target = transform;
