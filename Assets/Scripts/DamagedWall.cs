@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UIElements;
 
 public class DamagedWall : MonoBehaviour
@@ -8,6 +10,7 @@ public class DamagedWall : MonoBehaviour
     public float hp = 50;
     public float repairRate = 5;
     public bool repaired = false;
+    public int changedColor = 0;
     public Material fixedMaterial;
     public Material damagedMaterial;
     private Renderer renderer;
@@ -21,10 +24,14 @@ public class DamagedWall : MonoBehaviour
     GameObject Arrow;
     public AlarmTrigger alarm;
     public ScoreManager SM;
+
     private void Start()
     {
         renderer = GetComponent<Renderer>();
-    }
+        //var damagedWallRenderer = gameObject.GetComponent<Renderer>();
+        //Color DamagedColor = new Color(255f, 0f, 0f, 105f);
+        //Color GettingFixedColor = new Color(255f, 0f, 0f, 105f);
+    }  
     private void OnTriggerStay(Collider other)
     {
         if (other.transform.tag == "blowtorch")
@@ -57,7 +64,39 @@ private void Update()
             Destroy(Arrow);
             DTtriggered = true;
             alarm.Explosion = false;
+            Destroy(gameObject);
         }
+
+        if (repaired == false) //&& changedColor == 0)
+        {
+            if (hp >= 60)
+            {
+                renderer.material.color = new Color32(255, 100, 100, 255);
+            }
+            if (hp >= 70)
+            {
+                renderer.material.color = new Color32(255, 150, 150, 255);
+            }
+            if (hp >= 80)
+            {
+                renderer.material.color = new Color32(255, 200, 200, 255);
+            }
+            if (hp >= 90)
+            {
+                renderer.material.color = new Color32(255, 230, 230, 255);
+            }
+
+
+            //renderer.material.color = new Color32(120, 80, 230, 255);
+
+
+            //changedColor++;
+            //var damagedWallRenderer = gameObject.GetComponent<Renderer>();
+            //Color GettingFixedColor = new Color(120f, 0f, 0f, 105f);
+            //damagedWallRenderer.material.SetColor("_Color", GettingFixedColor);
+            //Debug.Log("updated color");
+        }
+
     }
     public void ApplyDamage()
     {
