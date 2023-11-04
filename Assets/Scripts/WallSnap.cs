@@ -12,6 +12,9 @@ public class WallSnap : MonoBehaviour
     public GameObject parentObject;
     GameObject Arrow;
     public GameObject prefabToInstantiate;
+    public Animator m_Animator;
+    public GameObject PS;
+    public GameObject PS1;
 
     public void Start()
     {
@@ -22,6 +25,8 @@ public class WallSnap : MonoBehaviour
             newChildObject.transform.parent = parentObject.transform;
             Arrow.GetComponent<GuideArrow>().target = transform;
         }
+        PS.SetActive(false);
+        PS1.SetActive(false);
     }
     public void CheckIfComplete()
     {
@@ -49,7 +54,18 @@ public class WallSnap : MonoBehaviour
             PipeComplete= true;
             ScoreManager.Score = ScoreManager.Score + 80;
             Destroy(Arrow);
+            m_Animator.SetTrigger("SolvedPuzzle");
+            StartCoroutine(ActivatePS(4));
         }
         print("Task completed");
     }
-}
+     IEnumerator ActivatePS(int Delay)
+    {
+        PS.SetActive(true);
+        PS1.SetActive(true);
+        yield return new WaitForSeconds(Delay);
+        PS.SetActive(false);
+        PS1.SetActive(false);
+    }
+ }
+

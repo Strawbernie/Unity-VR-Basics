@@ -6,12 +6,17 @@ public class Randomizer : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject[] gameObjects;
+    public GameObject[] PipeWalls;
     int firstNumber;
     void Start()
     {
         foreach (var obj in gameObjects)
         {
             obj.SetActive(false);
+        }
+        foreach (var pw in PipeWalls)
+        {
+            pw.SetActive(false);
         }
 
         int value = Random.Range(1, 21);
@@ -80,6 +85,22 @@ public class Randomizer : MonoBehaviour
                 break;
             case 21:
                 gameObjects[20].SetActive(true);
+                break;
+        }
+        int wall = Random.Range(1, 5);
+        switch (wall)
+        {
+            case 1:
+                PipeWalls[0].SetActive(true);
+                break;
+            case 2:
+                PipeWalls[1].SetActive(true);
+                break;
+            case 3:
+                PipeWalls[2].SetActive(true);
+                break;
+            case 4:
+                PipeWalls[3].SetActive(true);
                 break;
         }
         StartCoroutine(ActivateObjects());
