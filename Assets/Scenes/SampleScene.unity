@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42537087, g: 0.46299684, b: 0.5608342, a: 1}
+  m_IndirectSpecularColor: {r: 0.4237482, g: 0.46061534, b: 0.5580783, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9511,6 +9511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: valve
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 792f3218c9e10e4448507027e21ef18b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -11685,6 +11689,10 @@ PrefabInstance:
       propertyPath: m_ThrowOnDetach
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 10645660771083768, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 458455987147310421, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
       propertyPath: m_ThrowOnDetach
       value: 0
@@ -11705,9 +11713,29 @@ PrefabInstance:
       propertyPath: m_ThrowOnDetach
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2744799684859810743, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843942652299942984, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018274613808300150, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4307048114717635022, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
       propertyPath: m_ThrowOnDetach
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316625759367937399, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377414553881164417, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4377414555395714346, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
       propertyPath: m_Name
@@ -11765,13 +11793,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4448610947740422499, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960374874079867313, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5125856410922115984, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
       propertyPath: m_ThrowOnDetach
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5303282374214227168, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5761501312052140718, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
       propertyPath: m_ThrowOnDetach
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777753941228070877, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877751222257503321, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299963293378769847, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502875347110141359, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7052282906807323033, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
       propertyPath: m_ThrowOnDetach
@@ -11792,6 +11848,14 @@ PrefabInstance:
     - target: {fileID: 8248743371041620182, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
       propertyPath: m_ThrowOnDetach
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364470619428540056, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989981330775324582, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 9166705365556389255, guid: 145ac457e7c613a4b9cbbced65085013, type: 3}
       propertyPath: m_ThrowOnDetach
@@ -36449,7 +36513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e59873c4a76e747be2721f1d180d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OxygenLeft: 100
+  OxygenLeft: 200
   OxygenMeter: {fileID: 908986639}
   isEmpty: 0
 --- !u!65 &1231731341
@@ -52309,7 +52373,7 @@ MonoBehaviour:
   m_SmoothPosition: 0
   m_SmoothPositionAmount: 8
   m_TightenPosition: 0.1
-  m_TrackRotation: 1
+  m_TrackRotation: 0
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
@@ -54093,7 +54157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e59873c4a76e747be2721f1d180d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OxygenLeft: 100
+  OxygenLeft: 200
   OxygenMeter: {fileID: 264944849}
   isEmpty: 0
 --- !u!65 &1646247461
@@ -57805,7 +57869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e59873c4a76e747be2721f1d180d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OxygenLeft: 100
+  OxygenLeft: 200
   OxygenMeter: {fileID: 946446990}
   isEmpty: 0
 --- !u!65 &1859780108
