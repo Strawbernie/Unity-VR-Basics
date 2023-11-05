@@ -8,7 +8,12 @@ public class TutorialCheck : MonoBehaviour
     public OxygenManager oxygenManager;
     public DamagedWall DW;
     public Fire fire;
+    public HealthController healthController;
 
+    private void Start()
+    {
+        healthController.inTutorial = true;
+    }
     // Update is called once per frame
     void Update()
     {

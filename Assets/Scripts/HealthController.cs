@@ -21,6 +21,7 @@ public class HealthController : MonoBehaviour
     [SerializeField] private float maxHealCooldown = 3.0f;
     [SerializeField] private bool startCooldown = false;
     public OxygenManager oxygenManager;
+    public bool inTutorial = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +64,7 @@ public class HealthController : MonoBehaviour
                 startCooldown= false;
             }
         }
-        if (oxygenManager.NoOxygen)
+        if (oxygenManager.NoOxygen && !inTutorial)
         {
             canRegen = false;
             currentPlayerHealth = currentPlayerHealth - .1f * Difficulty.difficulty;
