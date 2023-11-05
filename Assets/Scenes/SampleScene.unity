@@ -52506,7 +52506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountExtinguishedPerSecond: 0.2
-  inputData: {fileID: 0}
+  inputData: {fileID: 806256750}
   PS: {fileID: 558451200}
   InteractableItem: {fileID: 1842248757}
 --- !u!65 &1842248756
