@@ -28,4 +28,15 @@ public class DifficultyButton : MonoBehaviour
             text.color = newColor;
         }
     }
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("mainmenu");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
