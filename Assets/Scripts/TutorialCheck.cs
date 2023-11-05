@@ -13,6 +13,8 @@ public class TutorialCheck : MonoBehaviour
     public OxygenManager oxygenManager;
     public DamagedWall DW;
     public Fire fire;
+    public GameObject fire1;
+    public GameObject wall;
     public HealthController healthController;
     public GameObject CrouchTutorial;
     public GameObject GrabTutorial;
@@ -37,6 +39,11 @@ public class TutorialCheck : MonoBehaviour
         if (DW.repaired && !oxygenManager.NoOxygen && !fire.isLit)
         {
             SceneManager.LoadScene("SampleScene");
+        }
+        if (!oxygenManager.NoOxygen)
+        {
+            fire1.SetActive(true);
+            wall.SetActive(true);
         }
         // Check input from the left controller.
         CheckControllerInput(LeftController);
