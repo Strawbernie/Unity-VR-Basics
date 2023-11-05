@@ -24,6 +24,7 @@ public class DamagedWall : MonoBehaviour
     public AlarmTrigger alarm;
     public ScoreManager SM;
     public Vector3 offset;
+    public bool inTutorial = false;
 
     private void Start()
     {
@@ -58,13 +59,16 @@ private void Update()
         }
         if (repaired && newDialogue && interacted && DTtriggered2)
         {
-            newDialogue= false;
+            DTtriggered = true;
+            newDialogue = false;
             shiphealth.SetHealth(shiphealth.Health = shiphealth.Health+ 10 * Difficulty.difficulty);
             ScoreManager.Score = ScoreManager.Score + 30;
             Destroy(Arrow);
-            DTtriggered = true;
             alarm.Explosion = false;
-            Destroy(gameObject);
+            if (!inTutorial)
+            {
+                Destroy(gameObject);
+            }
         }
 
         if (repaired == false) //&& changedColor == 0)

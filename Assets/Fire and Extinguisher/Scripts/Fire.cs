@@ -22,6 +22,7 @@ public class Fire : MonoBehaviour
     public Vector3 offset;
     public ShipHealth shiphealth;
     public OxygenManager oxygen;
+    public bool inTutorial = false;
 
     private void Start()
     {
@@ -56,7 +57,7 @@ public class Fire : MonoBehaviour
             alarm.OnFire = true;
             shiphealth.SetHealth(shiphealth.Health = shiphealth.Health - 0.008f * Difficulty.difficulty);
         }
-        if (oxygen.NoOxygen)
+        if (oxygen.NoOxygen && !inTutorial)
         {
             timeLastWatered = Time.time;
             currentIntensity -= 1;
