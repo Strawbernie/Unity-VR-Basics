@@ -8,6 +8,8 @@ public class ShipHealth : MonoBehaviour
 {
     public float Health;
     public Slider slider;
+    public Slider WristSlider;
+    public Slider OxygenWristSlider;
 
     // Update is called once per frame
     void Update()
@@ -20,5 +22,11 @@ public class ShipHealth : MonoBehaviour
     public void SetHealth(float Health)
     {
         slider.value = Health;
+        WristSlider.value = Health;
+    }
+
+    public void SetOxygen(float Oxygen)
+    {
+        slider.value = Oxygen;
     }
 }
