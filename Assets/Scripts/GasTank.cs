@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GasTank : MonoBehaviour
 {
     public float value;
+    float EngineValue;
+    public Slider engineSlider;
     public Slider progressSlider;
     public ParticleSystem fuelVFX;
     bool Gotpoints = false;
@@ -14,9 +16,12 @@ public class GasTank : MonoBehaviour
     public GameObject prefabToInstantiate;
     public GameObject FuelStation;
     public GameObject Engine;
+    public AudioSource pouring;
+    bool pouringisPlaying;
     GameObject Arrow;
     bool holding = false;
     public Vector3 offset;
+
 
     private void Start()
     {
@@ -44,9 +49,20 @@ public class GasTank : MonoBehaviour
         {
             holding = false;
         }
-        if (other.transform.tag == "Engine" && Gotpoints && value > 0)
+        if (other.transform.tag == "Engine" && value > 0)
         {
-            value -= 10;
+            if (transform.eulerAngles.z > 225 && transform.eulerAngles.z < 315)
+            {
+                if (!fuelVFX.isPlaying) fuelVFX.Play();
+                FuelUp(-1);
+                EngineValue = EngineValue + 1;
+                engineSlider.value = EngineValue;
+            }
+            else
+            {
+                if (fuelVFX.isPlaying) fuelVFX.Stop();
+                if (pouringisPlaying) pouring.Stop();
+            }
         }
         else if (other.transform.tag == "Engine" && !Gotpoints && filledUP&& value<=0)
         {
@@ -62,6 +78,11 @@ public class GasTank : MonoBehaviour
 
         value += amount;
         progressSlider.value = value;
+        if (!pouringisPlaying)
+        {
+            pouring.Play();
+            pouringisPlaying = true;
+        }
     }
 
     private void FixedUpdate()
@@ -69,11 +90,13 @@ public class GasTank : MonoBehaviour
         if (value <= 0)
         {
             if (fuelVFX.isPlaying) fuelVFX.Stop();
-            return;
+            if (pouringisPlaying) pouring.Stop();
+                return;
         }
         if (value >= 100 && !filledUP)
         {
             filledUP= true;
+            if (pouringisPlaying) pouring.Stop();
         }
         if (holding && value <= 0)
         {
@@ -82,15 +105,6 @@ public class GasTank : MonoBehaviour
         else if(value>100)
         {
             Arrow.GetComponent<GuideArrow>().target = Engine.transform;
-        }
-        if (transform.eulerAngles.z > 225 && transform.eulerAngles.z < 315)
-        {
-            if (!fuelVFX.isPlaying) fuelVFX.Play();
-            FuelUp(-1);
-        }
-        else
-        {
-            if (fuelVFX.isPlaying) fuelVFX.Stop();
         }
     }
 }

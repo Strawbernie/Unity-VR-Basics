@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -55,7 +56,7 @@ public class Fire : MonoBehaviour
         if (isLit)
         {
             alarm.OnFire = true;
-            shiphealth.SetHealth(shiphealth.Health = shiphealth.Health - 0.008f * Difficulty.difficulty);
+            shiphealth.SetHealth(shiphealth.Health = shiphealth.Health - 0.004f * Difficulty.difficulty);
         }
         if (oxygen.NoOxygen && !inTutorial)
         {
@@ -82,6 +83,7 @@ public class Fire : MonoBehaviour
                 Destroy(Arrow);
                 receivedPoints = true;
                 alarm.OnFire = false;
+                gameObject.SetActive(false);
             }
             return true;
         }

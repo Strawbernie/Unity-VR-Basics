@@ -8,7 +8,7 @@ public class Randomizer : MonoBehaviour
     public GameObject[] gameObjects;
     public GameObject[] PipeWalls;
     int firstNumber;
-    void Start()
+    IEnumerator Start()
     {
         foreach (var obj in gameObjects)
         {
@@ -18,7 +18,8 @@ public class Randomizer : MonoBehaviour
         {
             pw.SetActive(false);
         }
-
+        int Delay = Random.Range(10, 20);
+        yield return new WaitForSeconds(Delay);
         int value = Random.Range(1, 21);
         firstNumber = value;
         switch (value)
@@ -109,7 +110,7 @@ public class Randomizer : MonoBehaviour
     {
         if (Difficulty.difficulty <= 1)
         {
-            int Delay = Random.Range(10, 25);
+            int Delay = Random.Range(35, 50);
             yield return new WaitForSeconds(Delay);
             int secondRandomNumber;
             do
@@ -182,7 +183,7 @@ public class Randomizer : MonoBehaviour
                     gameObjects[20].SetActive(true);
                     break;
             }
-            int Delay2 = Random.Range(10, 25);
+            int Delay2 = Random.Range(35, 50);
             yield return new WaitForSeconds(Delay2);
             int thirdRandomNumber;
             do
@@ -259,7 +260,7 @@ public class Randomizer : MonoBehaviour
         }
         else if (Difficulty.difficulty == 2)
         {
-            int Delay = Random.Range(9, 18);
+            int Delay = Random.Range(30, 45);
             yield return new WaitForSeconds(Delay);
             int secondRandomNumber;
             do
@@ -332,7 +333,7 @@ public class Randomizer : MonoBehaviour
                     gameObjects[20].SetActive(true);
                     break;
             }
-            int Delay2 = Random.Range(9, 18);
+            int Delay2 = Random.Range(30, 45);
             yield return new WaitForSeconds(Delay2);
             int thirdRandomNumber;
             do
@@ -405,7 +406,7 @@ public class Randomizer : MonoBehaviour
                     gameObjects[20].SetActive(true);
                     break;
             }
-            int Delay3 = Random.Range(9, 18);
+            int Delay3 = Random.Range(30, 45);
             yield return new WaitForSeconds(Delay);
             int fourthRandomNumber;
             do
@@ -483,7 +484,7 @@ public class Randomizer : MonoBehaviour
         }
         else if (Difficulty.difficulty == 3)
         {
-            int Delay = Random.Range(5, 15);
+            int Delay = Random.Range(25, 40);
             yield return new WaitForSeconds(Delay);
             int secondRandomNumber;
             do
@@ -556,7 +557,7 @@ public class Randomizer : MonoBehaviour
                     gameObjects[20].SetActive(true);
                     break;
             }
-            int Delay2 = Random.Range(5, 15);
+            int Delay2 = Random.Range(25, 40);
             yield return new WaitForSeconds(Delay2);
             int thirdRandomNumber;
             do
@@ -629,7 +630,7 @@ public class Randomizer : MonoBehaviour
                     gameObjects[20].SetActive(true);
                     break;
             }
-            int Delay3 = Random.Range(5, 15);
+            int Delay3 = Random.Range(25, 40);
             yield return new WaitForSeconds(Delay);
             int fourthRandomNumber;
             do
@@ -702,7 +703,7 @@ public class Randomizer : MonoBehaviour
                     gameObjects[20].SetActive(true);
                     break;
             }
-            int Delay4 = Random.Range(5, 15);
+            int Delay4 = Random.Range(25, 40);
             yield return new WaitForSeconds(Delay);
             int fifthRandomNumber;
             do
