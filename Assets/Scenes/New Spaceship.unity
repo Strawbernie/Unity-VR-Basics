@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &968096830
+--- !u!1001 &70542045
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -131,55 +131,67 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 6eea9573dde9c144ca1479cafa904d95, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -150
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6eea9573dde9c144ca1479cafa904d95, type: 3}
-      propertyPath: m_LocalPosition.y
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100.00003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100.00003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6eea9573dde9c144ca1479cafa904d95, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.051487
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6eea9573dde9c144ca1479cafa904d95, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6eea9573dde9c144ca1479cafa904d95, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6eea9573dde9c144ca1479cafa904d95, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6eea9573dde9c144ca1479cafa904d95, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6eea9573dde9c144ca1479cafa904d95, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6eea9573dde9c144ca1479cafa904d95, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6eea9573dde9c144ca1479cafa904d95, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 6eea9573dde9c144ca1479cafa904d95, type: 3}
+    - target: {fileID: 919132149155446097, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
       propertyPath: m_Name
-      value: Spaceship_Textured
+      value: Spaceship (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6eea9573dde9c144ca1479cafa904d95, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2668415acc8c37241a96e5cd565f4cfa, type: 3}
 --- !u!1 &989657799
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +353,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7100da9fd1355894f84fd56301cf66ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -127.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7100da9fd1355894f84fd56301cf66ac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -486,6 +498,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1895545656}
   - {fileID: 989657801}
-  - {fileID: 968096830}
   - {fileID: 1573567132}
   - {fileID: 1845978992}
+  - {fileID: 70542045}
