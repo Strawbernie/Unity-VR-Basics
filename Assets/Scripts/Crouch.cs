@@ -20,7 +20,6 @@ public class Crouch : MonoBehaviour
     private void Start()
     {
         LeftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
-        float Ypos = Camera1.position.y;
         crouching = false;
     }
     // Update is called once per frame
