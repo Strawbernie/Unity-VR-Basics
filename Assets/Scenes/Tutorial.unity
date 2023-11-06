@@ -10735,6 +10735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   slider: {fileID: 1626335802}
+  WristSlider: {fileID: 0}
+  OxygenWristSlider: {fileID: 0}
 --- !u!82 &515504440
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20655,7 +20657,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 124
   m_CollisionDetection: 2
 --- !u!65 &778460402
 BoxCollider:
@@ -39867,7 +39869,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 124
   m_CollisionDetection: 2
 --- !u!65 &2070338744
 BoxCollider:
