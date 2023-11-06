@@ -14645,6 +14645,7 @@ MonoBehaviour:
   slider: {fileID: 924650202}
   WristSlider: {fileID: 281605998}
   OxygenWristSlider: {fileID: 0}
+  DW: {fileID: 982827950}
 --- !u!82 &515504440
 AudioSource:
   m_ObjectHideFlags: 0
