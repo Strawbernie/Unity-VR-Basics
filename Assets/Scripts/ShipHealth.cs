@@ -10,6 +10,7 @@ public class ShipHealth : MonoBehaviour
     public Slider slider;
     public Slider WristSlider;
     public Slider OxygenWristSlider;
+    public DamagedWall DW;
 
     // Update is called once per frame
     void Update()
@@ -22,7 +23,10 @@ public class ShipHealth : MonoBehaviour
     public void SetHealth(float Health)
     {
         slider.value = Health;
-        WristSlider.value = Health;
+        if(!DW.inTutorial)
+        {
+            WristSlider.value = Health;
+        }
     }
 
     public void SetOxygen(float Oxygen)
