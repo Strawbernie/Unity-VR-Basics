@@ -1,34 +1,9 @@
 fileFormatVersion: 2
-guid: 7cc8e06c07cdcf54bab58dbbce19961a
+guid: 51d0b6490372d8d4b8a52a046cab1ff4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Floor
-    second: {fileID: 2100000, guid: 7b76ec4f516fb5d4f953fdca887b7f2f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass Windshield
-    second: {fileID: 2100000, guid: 44281aa68db1e254b9a81bda7c67bcc3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Inside Walls
-    second: {fileID: 2100000, guid: 725bb4d6fbc1843468b21457acfdf042, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Walls Inside
-    second: {fileID: 2100000, guid: 35435ec5b0dfd0c4b9336d47aae9f76b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Windshield CP
-    second: {fileID: 2100000, guid: 44281aa68db1e254b9a81bda7c67bcc3, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
