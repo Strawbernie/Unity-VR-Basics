@@ -28261,6 +28261,10 @@ PrefabInstance:
       propertyPath: m_ShowInteractableHoverMeshes
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2028658262322016611, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
+      propertyPath: correctDesire.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3745888820072821847, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.021
@@ -28287,7 +28291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5109331662078944138, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: correctDesire.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5664432619315211794, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: m_InteractionManager
@@ -28387,7 +28391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8273177229933018759, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: correctDesire.y
-      value: -90
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8273177229933018759, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: correctDesire.z
@@ -44580,6 +44584,10 @@ PrefabInstance:
       propertyPath: m_ShowInteractableHoverMeshes
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2028658262322016611, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
+      propertyPath: correctDesire.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 4614251068257721555, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -44602,7 +44610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5109331662078944138, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: correctDesire.y
-      value: -90
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5109331662078944138, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: correctDesire.z
@@ -59121,6 +59129,14 @@ PrefabInstance:
       propertyPath: m_ShowInteractableHoverMeshes
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2028658262322016611, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
+      propertyPath: correctDesire.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028658262322016611, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
+      propertyPath: correctDesire.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 4614251068257721555, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -59132,6 +59148,10 @@ PrefabInstance:
     - target: {fileID: 4614251068257721555, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: m_ShowInteractableHoverMeshes
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109331662078944138, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
+      propertyPath: correctDesire.y
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 5664432619315211794, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: m_InteractionManager
@@ -60375,6 +60395,10 @@ PrefabInstance:
       propertyPath: m_ShowInteractableHoverMeshes
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2028658262322016611, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
+      propertyPath: correctDesire.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 4614251068257721555, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -60397,7 +60421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5109331662078944138, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: correctDesire.y
-      value: -90
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5109331662078944138, guid: b2f509d3f9adc6a43b6ae1ecff544782, type: 3}
       propertyPath: correctDesire.z
