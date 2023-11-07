@@ -17,6 +17,7 @@ public class DamagedWall : MonoBehaviour
     private bool interacted = false;
     public bool DTtriggered = false;
     public bool DTtriggered2 = false;
+    public bool almostRepaired = false;
     public ShipHealth shiphealth;
     public GameObject parentObject;
     public GameObject prefabToInstantiate;
@@ -25,6 +26,7 @@ public class DamagedWall : MonoBehaviour
     public ScoreManager SM;
     public Vector3 offset;
     public bool inTutorial = false;
+    public MeshRenderer Mesh;
 
     private void Start()
     {
@@ -48,8 +50,15 @@ private void Update()
     {
         if (hp >= 100)
         {
-            repaired = true;
-            renderer.material = fixedMaterial;
+            
+            
+            if (almostRepaired)
+            {
+                Mesh.enabled = false;
+                repaired = true;
+                renderer.material = fixedMaterial;
+            }
+
         }
         else
         {
@@ -85,9 +94,10 @@ private void Update()
             {
                 renderer.material.color = new Color32(255, 200, 200, 255);
             }
-            if (hp >= 90)
+            if (hp >= 90 && hp <= 92)
             {
                 renderer.material.color = new Color32(255, 230, 230, 255);
+                almostRepaired = true;
             }
 
 

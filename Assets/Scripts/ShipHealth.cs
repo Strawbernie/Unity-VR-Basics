@@ -23,10 +23,10 @@ public class ShipHealth : MonoBehaviour
     public void SetHealth(float Health)
     {
         slider.value = Health;
-        if(!DW.inTutorial)
-        {
+        //if(!DW.inTutorial)
+        //{
             WristSlider.value = Health;
-        }
+        //}
     }
 
     public void SetOxygen(float Oxygen)

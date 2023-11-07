@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42537087, g: 0.46299684, b: 0.5608342, a: 1}
+  m_IndirectSpecularColor: {r: 0.4237482, g: 0.46061534, b: 0.5580783, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19295,6 +19295,7 @@ GameObject:
   - component: {fileID: 1590637083}
   - component: {fileID: 1590637082}
   - component: {fileID: 1590637088}
+  - component: {fileID: 1590637089}
   m_Layer: 0
   m_Name: Boundary
   m_TagString: Untagged
@@ -19364,7 +19365,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 13.34756, y: 6.769146, z: 0.999012}
-  m_Center: {x: -6.17378, y: 2.884573, z: 19.671122}
+  m_Center: {x: -6.17378, y: 2.884573, z: 9.11}
 --- !u!65 &1590637085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19424,6 +19425,27 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1590637088
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590637081}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1590637089
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
