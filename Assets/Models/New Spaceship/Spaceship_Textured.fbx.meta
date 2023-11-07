@@ -3,7 +3,57 @@ guid: 6eea9573dde9c144ca1479cafa904d95
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Backdoor
+    second: {fileID: 2100000, guid: 9dbe27c65b35b9d4cbaa2d929b5963ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grill
+    second: {fileID: 2100000, guid: 9e1403d3610f626468ec2933fdffb068, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Legs
+    second: {fileID: 2100000, guid: 8737248005fd23e458fe665801a77a53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Outside
+    second: {fileID: 2100000, guid: 4ae6a7d0dc1f4db45a781123e41371e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Outside CP
+    second: {fileID: 2100000, guid: 920174ba134406d43b2fc3a74f0a2b05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Outside Top
+    second: {fileID: 2100000, guid: 7b0f5151f2064aa46a2aa8b81deab48e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thrusters
+    second: {fileID: 2100000, guid: d4ff6a0f0ea73704e967bd96331b6bc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls Inside
+    second: {fileID: 2100000, guid: 725bb4d6fbc1843468b21457acfdf042, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windshield CP
+    second: {fileID: 2100000, guid: 326cec0cfe70a3d4e8e387e126e6e592, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wings.002
+    second: {fileID: 2100000, guid: 0a20e8a0b54791b4ab560410363766af, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
